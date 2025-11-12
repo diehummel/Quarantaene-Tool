@@ -61,7 +61,6 @@ rspamd_config:register_symbol({
 
         logger.info("QUARANTINE_SAVE: Score: " .. score .. ", Action: " .. tostring(action))
 
-        -- NUR speichern, wenn wirklich rejected oder hoher Score
         if action == 'reject' or (score >= 10.0 and action ~= 'accept') then
             logger.info("QUARANTINE_SAVE: Saving email")
             save_to_quarantine(task)
