@@ -18,7 +18,6 @@ kept=0
 echo "Durchsuche $QUARANTINE_DIR nach Dateien ohne 'To:' Header..."
 
 find "$QUARANTINE_DIR" -maxdepth 1 -type f -print0 | while IFS= read -r -d '' file; do
-    # grep -q = quiet, -F = fixed string, -m1 = stop nach erstem Treffer
     if grep -q -F -m1 "To:" "$file" 2>/dev/null; then
         echo "Behalte: $file (enthält To:)"
         ((kept++))
