@@ -1,4 +1,4 @@
-# Quarantaene-Tool
+# Quarantäne-Tool
 Mail Quarantäne Tool Webseite inkl. Settings/Skripte für RSPAMD und Postfix.
 Verwendet zur Authentifizierung die Datenbank von Postfixadmin.
 Benutzt sendmail für die Mailzustellung.
